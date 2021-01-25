@@ -48,4 +48,4 @@ Widget.Content = styled.div`
   }
 `;
 
-export default Widget
+export default Widget;
