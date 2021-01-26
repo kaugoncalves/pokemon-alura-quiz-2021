@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Widget = styled.div`
+const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
   border: 1px solid ${({ theme }) => theme.colors.primary};
@@ -47,3 +47,5 @@ Widget.Content = styled.div`
     padding: 0;
   }
 `;
+
+export default Widget;
