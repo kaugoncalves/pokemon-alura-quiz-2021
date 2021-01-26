@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import db from '../db.json';
-import Widget from '../src/components/Widget'
-import QuizLogo from '../src/components/QuizLogo'
-import QuizBackground from '../src/components/QuizBackground'
-import Footer from '../src/components/Footer'
-import GitHubCorner from '../src/components/GithubCorner'
+import Widget from '../src/components/Widget/Index.js'
+import QuizLogo from '../src/components/QuizLogo/Index.js'
+import QuizBackground from '../src/components/QuizBackground/Index.js' 
+import Footer from '../src/components/Footer/Index.js'
+import GitHubCorner from '../src/components/GithubCorner/Index.js'
 
 
 export const QuizContainer = styled.div`
