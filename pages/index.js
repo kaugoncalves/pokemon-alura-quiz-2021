@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
 import db from '../db.json';
-import Widget from '../src/components/Widget/Index.js';
-import QuizLogo from '../src/components/QuizLogo/Index.js';
-import QuizBackground from '../src/components/QuizBackground/Index.js';
-import Footer from '../src/components/Footer/Index.js';
-import GitHubCorner from '../src/components/GithubCorner/Index.js';
+import Widget from '../src/components/Widget/index.js';
+import QuizLogo from '../src/components/QuizLogo/index.js';
+import QuizBackground from '../src/components/QuizBackground/index.js';
+import Footer from '../src/components/Footer/index.js';
+import GitHubCorner from '../src/components/GitHubCorner/index.js';
 import { useRouter } from 'next/router';
-import Input from '../src/components/Input/Index.js';
-import Button from '../src/components/Button/Index.js'
-import QuizContainer from '../src/components/QuizContainer/Index.js'
+import Input from '../src/components/Input/index.js';
+import Button from '../src/components/Button/index.js'
+import QuizContainer from '../src/components/QuizContainer/index.js'
 
 
 export default function Home() {
