@@ -1,10 +1,10 @@
 import React from 'react';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo/index.js';
-import QuizBackground from '../src/components/QuizBackground/index.js';
-import QuizContainer from '../src/components/QuizContainer/index.js';
-import Button from '../src/components/Button/index.js';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
+import QuizContainer from '../src/components/QuizContainer';
+import Button from '../src/components/Button';
 import styled from 'styled-components';
 import loadingGif from '../src/Assets/Loading.gif'
 

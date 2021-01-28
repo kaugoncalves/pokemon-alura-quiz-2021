@@ -3,14 +3,14 @@ import styled from 'styled-components';
 import Head from 'next/head';
 import db from '../db.json';
 import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo/index.js';
-import QuizBackground from '../src/components/QuizBackground/index.js';
-import Footer from '../src/components/Footer/index.js';
-import GitHubCorner from '../src/components/GitHubCorner/index.js';
+import QuizLogo from '../src/components/QuizLogo';
+import QuizBackground from '../src/components/QuizBackground';
+import Footer from '../src/components/Footer';
+import GitHubCorner from '../src/components/GitHubCorner';
 import { useRouter } from 'next/router';
-import Input from '../src/components/Input/index.js';
-import Button from '../src/components/Button/index.js';
-import QuizContainer from '../src/components/QuizContainer/index.js';
+import Input from '../src/components/Input';
+import Button from '../src/components/Button';
+import QuizContainer from '../src/components/QuizContainer';
 
 
 export default function Home() {
