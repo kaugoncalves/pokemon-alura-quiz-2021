@@ -9,8 +9,8 @@ import Footer from '../src/components/Footer/index.js';
 import GitHubCorner from '../src/components/GitHubCorner/index.js';
 import { useRouter } from 'next/router';
 import Input from '../src/components/Input/index.js';
-import Button from '../src/components/Button/index.js'
-import QuizContainer from '../src/components/QuizContainer/index.js'
+import Button from '../src/components/Button/index.js';
+import QuizContainer from '../src/components/QuizContainer/index.js';
 
 
 export default function Home() {
