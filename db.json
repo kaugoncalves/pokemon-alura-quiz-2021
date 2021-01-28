@@ -4,15 +4,15 @@
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
+        "image": "https://i.pinimg.com/originals/58/37/d8/5837d8f2dc6832d0fa2c47ac45d16831.gif",
+        "title": "Plipup é um inicial de qual geração?",
         "description": "Essa é pra aquecer",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Segunda geração",
+          "Terceira geração",
+          "Quarta geração",
+          "Quinta geração"
         ]
       },
       {
