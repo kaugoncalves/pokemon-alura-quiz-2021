@@ -6,7 +6,7 @@ import QuizBackground from '../src/components/QuizBackground/index.js';
 import QuizContainer from '../src/components/QuizContainer/index.js';
 import Button from '../src/components/Button/index.js';
 import styled from 'styled-components';
-import loadingGif from '../src/Assets/Loading.gif';
+import loadingGif from '../src/Assets/Loading.gif'
 
 
 const Img = styled.img`
