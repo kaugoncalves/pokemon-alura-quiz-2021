@@ -16,13 +16,51 @@
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "https://i.gifer.com/5RTG.gif",
+        "title": "Em que nível Haunter evolui para um Gengar?",
+        "description": "hahaha",
+        "answer": 1,
+        "alternatives": [
+           "Nível 36",
+           "Não evolui com nível, mas sim com o sistema de troca",
+           "Não evolui com nível, mas sim com uma Dusk stone",
+           "Nível 40"
+        ]
+      },
+      {
+        "image": "https://38.media.tumblr.com/47069335994255532eb4a9787a7c1dff/tumblr_mge6yglNyZ1r3ifxzo1_500.gif",
+        "title": "Arceus foi apresentado pela primeira vez em qual geração?",
+        "description": "Hmm qual será",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+          "Quarta geração",
+          "Terceira geração",
+          "Segunda geração",
+          "Quinta geração"
+        ]
+      }, 
+      {
+        "image": "https://giffiles.alphacoders.com/916/91665.gif",
+        "title": "Quantas Eeveelutions existem?",
+        "description": "Mais de 8 mil",
+        "answer": 1,
+        "alternatives": [
+          "6",
+          "8",
+          "5",
+          "9"
+        ]
+      },
+      {
+        "image": "https://media0.giphy.com/media/dyLs9jrf4muAlmScDm/giphy.gif",
+        "title": "Quem é o professor Pokémon de Johto?",
+        "description": "Essa é difícil",
+        "answer": 0,
+        "alternatives": [
+          "Elmo",
+          "Carvalho",
+          "Juniper",
+          "Birch"
         ]
       }
     ],
