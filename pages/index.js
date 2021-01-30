@@ -104,7 +104,7 @@ export default function Home() {
         </Widget >
         <Footer />
       </QuizContainer>
-      <GitHubCorner projectUrl="https://github.com/kaugoncalves" />
+      <GitHubCorner projectUrl="https://github.com/kaugoncalves/pokemon-alura-quiz-2021" />
 
     </QuizBackground>
 
