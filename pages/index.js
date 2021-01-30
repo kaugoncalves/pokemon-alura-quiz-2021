@@ -38,19 +38,19 @@ export default function Home() {
               infosEvento.preventDefault();
               router.push(`/quiz?name=${name}`)
               console.log("Fez um submit");
-            }}> 
+            }}>
 
 
-            <Input
+              <Input
                 name="nomeDoUsuario"
                 onChange={(infosDoEvento) => setName(infosDoEvento.target.value)}
                 placeholder="Digite seu nome"
                 value={name}
               />
-              
-            <Button type="submit" disabled={name.length === 0}>
-              {`jogar ${name}`}
-            </Button>
+
+              <Button type="submit" disabled={name.length === 0}>
+                {`jogar ${name}`}
+              </Button>
             </form>
           </Widget.Content>
         </Widget>
@@ -62,8 +62,17 @@ export default function Home() {
 
           <Widget.Content>
             <h1>Oia la hein</h1>
-
-            <p>aqui</p>
+            <ul>
+            {db.external.map((linkExterno) => {
+                return (
+                <li>
+                  <Widget.Topic href={linkExterno}>
+                    {textoDoLink}
+                  </Widget.Topic>
+              </li>
+                );
+            })} 
+            </ul>
           </Widget.Content>
         </Widget>
         <Footer />

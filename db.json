@@ -62,10 +62,24 @@
           "Juniper",
           "Birch"
         ]
+      }, 
+      {
+        "image": "https://i.imgur.com/tEDs4iZ.gif",
+        "title": "Quem é MissigNo.?",
+        "description": "ኃጢአተኛ ነፍስህ ከድነት በላይ ነው እና",
+        "answer": 3,
+        "alternatives": [
+          "Isso não existe!",
+          "Um pokémon fantasma",
+          "Um pokémon criado por fans",
+          "Um bug"
+        ]
       }
     ],
     "external": [
-      ""
+      "https://aluraquiz-css.omariosouto.vercel.app/",
+      "https://aluraquiz-devsoutinho.omariosouto.vercel.app/",
+      "https://alura-quiz-2021-git-main.kaugoncalves.vercel.app/"
     ],
     "theme": {
       "colors": {
