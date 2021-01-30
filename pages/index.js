@@ -11,7 +11,8 @@ import { useRouter } from 'next/router';
 import Input from '../src/components/Input';
 import Button from '../src/components/Button';
 import QuizContainer from '../src/components/QuizContainer';
-
+import Link from '../src/components/Link';
+import { motion } from 'framer-motion'
 
 export default function Home() {
   const router = useRouter();
@@ -27,7 +28,16 @@ export default function Home() {
       <QuizContainer>
         <QuizLogo />
 
-        <Widget>
+        <Widget as={motion.section}
+        transition={{delay:0, duration:0.5}}
+          variants={{
+            show: { opacity: 1, y: '0'  },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+         
+          initial="hidden"
+          animate="show"
+        >
           <Widget.Header>
             Pokemon
           </Widget.Header>
@@ -53,28 +63,45 @@ export default function Home() {
               </Button>
             </form>
           </Widget.Content>
-        </Widget>
+        </Widget >
 
-        <Widget>
+        <Widget as={motion.section}
+        transition={{delay:0, duration:0.5}}
+          variants={{
+            show: { opacity: 1, y: '0'  },
+            hidden: { opacity: 0, y: '100%' },
+          }}
+         
+          initial="hidden"
+          animate="show"
+          >
           <Widget.Header>
             Quizes da galera
           </Widget.Header>
 
           <Widget.Content>
-            <h1>Oia la hein</h1>
+            <h1>Teste aqui seus conhecimentos em outras áreas</h1>
+
             <ul>
-            {db.external.map((linkExterno) => {
+              {db.external.map((linkExterno) => {
+                const [projectName, githubUser] = linkExterno
+                  .replace(/\//g, '')
+                  .replace('https:', '')
+                  .replace('.vercel.app', '')
+                  .split('.');
+
                 return (
-                <li>
-                  <Widget.Topic href={linkExterno}>
-                    {textoDoLink}
-                  </Widget.Topic>
-              </li>
+                  <li key={linkExterno}>
+                    <Widget.Topic
+                      href={`/quiz/${projectName}___${githubUser}`}>
+                      {`${githubUser}/${projectName}`}
+                    </Widget.Topic>
+                  </li>
                 );
-            })} 
+              })}
             </ul>
           </Widget.Content>
-        </Widget>
+        </Widget >
         <Footer />
       </QuizContainer>
       <GitHubCorner projectUrl="https://github.com/kaugoncalves" />

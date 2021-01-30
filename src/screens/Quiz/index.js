@@ -1,13 +1,13 @@
 import React from 'react';
-import db from '../db.json';
-import Widget from '../src/components/Widget';
-import QuizLogo from '../src/components/QuizLogo';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import Button from '../src/components/Button';
+import Widget from '../../../src/components/Widget';
+import QuizLogo from '../../../src/components/QuizLogo';
+import QuizBackground from '../../../src/components/QuizBackground';
+import QuizContainer from '../../../src/components/QuizContainer';
+import Button from '../../../src/components/Button';
 import styled from 'styled-components';
-import loadingGif from '../src/Assets/Loading.gif'
-import AlternativeForm from '../src/components/AlternativeForm';
+import loadingGif from '../../Assets/Loading.gif'
+import AlternativeForm from '../../../src/components/AlternativeForm';
+import BackLinkArrow from '../../components/BackLinkArrow';
 
 
 
@@ -82,9 +82,9 @@ function QuestionWidget({
   return (
     <Widget>
       <Widget.Header>
-        {/* <BackLinkArrow href="/" /> */}
+        <BackLinkArrow href="/"/> 
         <h3>
-          {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
+          {`Pergunta ${questionIndex + 1} de ${totalQuestions}`} 
         </h3>
       </Widget.Header>
 
@@ -133,6 +133,7 @@ function QuestionWidget({
                 data-status={isQuestionSubmited && alternativeStatus}
               >
                 <input
+                  disabled={isQuestionSubmited}
                   style={{ display: 'none' }}
                   id={alternativeId}
                   name={questionId}
@@ -148,8 +149,7 @@ function QuestionWidget({
             Confirmar
           </Button>
 
-          {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
-          {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
+          
 
         </AlternativeForm>
       </Widget.Content>
@@ -162,13 +162,14 @@ const screenStates = {
   LOADING: 'LOADING',
   RESULT: 'RESULT',
 };
-export default function QuizPage() {
+export default function QuizPage({ externalQuestions, externalBG }) {
   const [screenState, setScreenState] = React.useState(screenStates.LOADING);
   const [results, setResults] = React.useState([]);
-  const totalQuestions = db.questions.length;
+  const totalQuestions = externalQuestions.length;
   const [currentQuestion, setCurrentQuestion] = React.useState(0);
   const questionIndex = currentQuestion;
-  const question = db.questions[questionIndex];
+  const question = externalQuestions[questionIndex];
+  const bg = externalBG
 
   function addResult (result) {
     setResults([
@@ -180,10 +181,6 @@ export default function QuizPage() {
 
   }
 
-  // [React chama de: Efeitos || Effects]
-  // React.useEffect
-  // atualizado === willUpdate
-  // morre === willUnmount
   React.useEffect(() => {
     setTimeout(() => {
       setScreenState(screenStates.QUIZ);
@@ -200,7 +197,7 @@ export default function QuizPage() {
   }
 
   return (
-    <QuizBackground backgroundImage={db.bg}>
+    <QuizBackground backgroundImage={bg}>
       <QuizContainer>
         <QuizLogo />
         {screenState === screenStates.QUIZ && (
